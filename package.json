@@ -1,0 +1,13 @@
+{
+  "title": "mpopp's View Source Button",
+  "name": "mpopp-view-source",
+  "version": "0.0.1",
+  "description": "Adds a View Source button",
+  "main": "index.js",
+  "author": "Markus Popp <git@mpopp.net>",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT"
+}
