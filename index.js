@@ -1,9 +1,17 @@
-var self = require('sdk/self');
+var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
 
-// a dummy function, to show how tests work.
-// to see how to test this function, look at test/test-index.js
-function dummy(text, callback) {
-  callback(text);
+var button = buttons.ActionButton({
+  id: "viewsource",
+  label: "View Source",
+  icon: {
+    "16": "./view-source-16.png",
+    "32": "./view-source-32.png",
+    "64": "./view-source-64.png"
+  },
+  onClick: viewSource
+});
+
+function viewSource(state) {
+  tabs.open("view-source:" + tabs.activeTab.url);
 }
-
-exports.dummy = dummy;
