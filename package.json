@@ -1,10 +1,11 @@
 {
   "title": "View Page Source Button",
   "name": "mpopp-view-page-source",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds a View Page Source button to the toolbar",
   "main": "index.js",
   "author": "Markus Popp",
+  "icon": "icon.png",
   "engines": {
     "firefox": ">=38.0a1",
     "fennec": ">=38.0a1"
