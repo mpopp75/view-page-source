@@ -4,3 +4,4 @@
 *.xpi
 /xpi/
 /test/
+/data/screenshot*.png
