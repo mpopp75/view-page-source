@@ -1,2 +1,2 @@
-#mpopp's View Source Button
-Adds a View Source button
+#View Page Source Button
+Adds a View Page Source button to the toolbar.
