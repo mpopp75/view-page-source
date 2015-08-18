@@ -1,8 +1,8 @@
 {
   "title": "View Page Source Button",
-  "name": "mpopp-view-source",
-  "version": "0.1.0",
-  "description": "Adds a View Page Source button",
+  "name": "mpopp-view-page-source",
+  "version": "1.0.0",
+  "description": "Adds a View Page Source button to the toolbar",
   "main": "index.js",
   "author": "Markus Popp",
   "engines": {
