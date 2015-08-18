@@ -2,17 +2,17 @@ var buttons = require('sdk/ui/button/action');
 var tabs = require("sdk/tabs");
 
 var button = buttons.ActionButton({
-  id: "viewsource",
+  id: "viewpagesource",
   label: "View Page Source",
   icon: {
-    "16": "./view-source-16.png",
-    "32": "./view-source-32.png",
-    "64": "./view-source-64.png"
+    "16": "./view-page-source-16.png",
+    "32": "./view-page-source-32.png",
+    "64": "./view-page-source-64.png"
   },
-  onClick: viewSource
+  onClick: viewPageSource
 });
 
-function viewSource(state) {
+function viewPageSource(state) {
   var activeTabIndex = tabs.activeTab.index;
 
   // no page source if already page source or for about: pages
