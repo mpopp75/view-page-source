@@ -3,5 +3,5 @@
 .jpmignore
 *.xpi
 /xpi/
+/misc/
 /test/
-/data/screenshot*.png
