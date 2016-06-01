@@ -1,15 +1,18 @@
 {
   "title": "View Page Source Button",
   "name": "mpopp-view-page-source",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Adds a View Page Source button to the toolbar",
   "main": "lib/index.js",
   "author": "Markus Popp",
   "icon": "icon.png",
   "engines": {
-    "firefox": ">=38.0"
+    "firefox": ">=45.0"
   },
   "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ],
   "preferences": [{
     "name": "openInTab",
     "title": "Open in Tab or Window?",
