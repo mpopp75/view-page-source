@@ -1,13 +1,13 @@
 {
   "title": "View Page Source Button",
   "name": "mpopp-view-page-source",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Adds a View Page Source button to the toolbar",
   "main": "lib/index.js",
   "author": "Markus Popp",
   "icon": "icon.png",
   "engines": {
-    "firefox": ">=45.0"
+    "firefox": ">=52.0"
   },
   "license": "MIT",
   "keywords": [
@@ -29,6 +29,7 @@
     "value": true
   }],
   "permissions": {
-    "private-browsing": true
+    "private-browsing": true,
+    "multiprocess": true
   }
 }
