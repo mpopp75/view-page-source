@@ -1,0 +1,40 @@
+{
+
+  "description": "Adds a View Page Source button to the toolbar",
+  "manifest_version": 2,
+  "name": "View Page Source Button",
+  "version": "1.99.0",
+
+  "permissions": [
+      "tabs",
+      "<all_urls>"
+],
+
+  "background": {
+    "scripts": ["main.js"]
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/view-page-source-16.png",
+      "32": "icons/view-page-source-32.png",
+      "64": "icons/view-page-source-64.png"
+    }
+  },
+
+  "icons": {
+    "32": "icons/view-page-source-32.png",
+    "64": "icons/view-page-source-64.png"
+  },
+
+  "options_ui": {
+    "page": "options/options.html"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "view-page-source-button@mozilla.org",
+      "strict_min_version": "52.0"
+    }
+  }
+}

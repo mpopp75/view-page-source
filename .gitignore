@@ -1,2 +1,2 @@
-*.xpi
-xpi/*
+web-ext-artifacts/
+*.zip
