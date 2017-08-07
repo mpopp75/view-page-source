@@ -33,7 +33,7 @@
 
   "applications": {
     "gecko": {
-      "id": "view-page-source-button@mozilla.org",
+      "id": "@mpopp-view-page-source",
       "strict_min_version": "52.0"
     }
   }
