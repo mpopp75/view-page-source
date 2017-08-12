@@ -10,20 +10,16 @@ function buttonClicked() {
 function openUrl(result) {
     var creating = null;
     if (result.openInTabs === "window") {
-        console.log("Open view-source:" + currentTab.url + " in Window.");
-
         creating = browser.windows.create({
             url: "view-source:" + currentTab.url
         });
         creating.then(onCreated, onError);
     } else {
-        console.log("Open " + currentTab.url + " in Window.");
-
         creating = browser.tabs.create({
           url: "view-source:" + currentTab.url,
           index: currentTab.index + 1
         });
-        creating.then(onCreated);
+        creating.then(onCreated, onError);
     }
 
     function onCreated() {
@@ -52,3 +48,21 @@ function updateActiveTab(tabs) {
 browser.tabs.onUpdated.addListener(updateActiveTab);
 browser.tabs.onActivated.addListener(updateActiveTab);
 updateActiveTab();
+
+function getMenuItem(result) {
+    if (result.menuitem !== "no") {
+        browser.menus.create({
+            id: "pagesource",
+            title: "View Page Source",
+            contexts: ["tools_menu"],
+            icons: {
+                16: "icons/view-page-source-16.png",
+            },
+        });
+
+        browser.menus.onClicked.addListener(buttonClicked);
+    }
+}
+
+var getting = browser.storage.local.get("menuitem");
+getting.then(getMenuItem, onError);

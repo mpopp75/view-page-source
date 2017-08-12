@@ -13,6 +13,19 @@ function saveOptions(e) {
     browser.storage.local.set({
         openInTabs: selected
     });
+
+    browser.storage.local.set({
+        menuitem: (document.querySelector("#menuitem").checked ? "yes" : "no")
+    });
+
+    if (document.querySelector("#menuitem").checked === false) {
+        var removing = browser.menus.remove("pagesource");
+        removing.then(onRemoved, onError);
+    }
+
+    function onRemoved() {
+        console.log("Tools menu item removed.");
+    }
 }
 
 function restoreOptions() {
@@ -28,12 +41,19 @@ function restoreOptions() {
         }
     }
 
-    function onError(error) {
-        console.log(`Error: ${error}`);
+    function setMenuitem(result) {
+        document.querySelector("#menuitem").checked = (result.menuitem === "no") ? false : true;
     }
 
     var getting1 = browser.storage.local.get("openInTabs");
     getting1.then(setOpenInTab, onError);
+
+    var getting2 = browser.storage.local.get("menuitem");
+    getting2.then(setMenuitem, onError);
+}
+
+function onError(error) {
+    console.log(`Error: ${error}`);
 }
 
 document.addEventListener("DOMContentLoaded", restoreOptions);
