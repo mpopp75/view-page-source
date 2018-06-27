@@ -48,21 +48,3 @@ function updateActiveTab(tabs) {
 browser.tabs.onUpdated.addListener(updateActiveTab);
 browser.tabs.onActivated.addListener(updateActiveTab);
 updateActiveTab();
-
-function getMenuItem(result) {
-    if (result.menuitem !== "no") {
-        browser.menus.create({
-            id: "pagesource",
-            title: "View Page Source",
-            contexts: ["tools_menu"],
-            icons: {
-                16: "icons/view-page-source-16.png",
-            },
-        });
-
-        browser.menus.onClicked.addListener(buttonClicked);
-    }
-}
-
-var getting = browser.storage.local.get("menuitem");
-getting.then(getMenuItem, onError);
