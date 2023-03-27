@@ -31,7 +31,7 @@ function onError(error) {
     console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(buttonClicked);
+browser.action.onClicked.addListener(buttonClicked);
 
 function updateActiveTab(tabs) {
 

@@ -1,38 +1,53 @@
 {
-
-  "description": "Adds a View Page Source button to the toolbar",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "View Page Source Button",
+  "description": "Adds a View Page Source button to the toolbar",
   "version": "2.0.4",
-
-  "permissions": [
-      "storage",
-      "tabs",
-      "<all_urls>"
-],
-
-  "background": {
-    "scripts": ["main.js"]
+  "developer": {
+    "name": "Markus Popp",
+    "url": "https://github.com/mpopp75/view-page-source"
   },
-
-  "browser_action": {
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "main.js"
+    ]
+  },
+  "action": {
     "default_icon": {
       "16": "icons/view-page-source-16.png",
       "32": "icons/view-page-source-32.png",
       "64": "icons/view-page-source-64.png"
-    }
+    },
+    "theme_icons": [
+      {
+        "light": "icons/view-page-source-16.png",
+        "dark": "icons/view-page-source-16-dark.png",
+        "size": 16
+      },
+      {
+        "light": "icons/view-page-source-32.png",
+        "dark": "icons/view-page-source-32-dark.png",
+        "size": 32
+      },
+      {
+        "light": "icons/view-page-source-64.png",
+        "dark": "icons/view-page-source-64-dark.png",
+        "size": 64
+      }
+    ]
   },
-
-  "icons": {
-    "32": "icons/view-page-source-32.png",
-    "64": "icons/view-page-source-64.png"
-  },
-
   "options_ui": {
-    "page": "options/options.html"
+    "page": "options/options.html",
+    "browser_style": true
   },
-
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
       "id": "@mpopp-view-page-source",
       "strict_min_version": "102.0"
